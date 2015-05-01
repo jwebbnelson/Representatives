@@ -14,6 +14,9 @@
 		839A5D821AF18799006702AB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 839A5D811AF18799006702AB /* Images.xcassets */; };
 		839A5D851AF18799006702AB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 839A5D831AF18799006702AB /* LaunchScreen.xib */; };
 		839A5D911AF18799006702AB /* RainMyRepresentativesTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 839A5D901AF18799006702AB /* RainMyRepresentativesTests.m */; };
+		83A20E4F1AF305A1007C5FD5 /* Representative.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A20E4E1AF305A1007C5FD5 /* Representative.m */; };
+		83A20E521AF30CEB007C5FD5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A20E511AF30CEB007C5FD5 /* MapKit.framework */; };
+		83A20E541AF30CF2007C5FD5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A20E531AF30CF2007C5FD5 /* CoreLocation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +43,10 @@
 		839A5D8A1AF18799006702AB /* RainMyRepresentativesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RainMyRepresentativesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		839A5D8F1AF18799006702AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		839A5D901AF18799006702AB /* RainMyRepresentativesTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RainMyRepresentativesTests.m; sourceTree = "<group>"; };
+		83A20E4D1AF305A1007C5FD5 /* Representative.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Representative.h; sourceTree = "<group>"; };
+		83A20E4E1AF305A1007C5FD5 /* Representative.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Representative.m; sourceTree = "<group>"; };
+		83A20E511AF30CEB007C5FD5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		83A20E531AF30CF2007C5FD5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +54,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83A20E541AF30CF2007C5FD5 /* CoreLocation.framework in Frameworks */,
+				83A20E521AF30CEB007C5FD5 /* MapKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -66,6 +75,8 @@
 				839A5D731AF18799006702AB /* RainMyRepresentatives */,
 				839A5D8D1AF18799006702AB /* RainMyRepresentativesTests */,
 				839A5D721AF18799006702AB /* Products */,
+				83A20E531AF30CF2007C5FD5 /* CoreLocation.framework */,
+				83A20E511AF30CEB007C5FD5 /* MapKit.framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -85,6 +96,7 @@
 				839A5D791AF18799006702AB /* AppDelegate.m */,
 				839A5D7B1AF18799006702AB /* ViewController.h */,
 				839A5D7C1AF18799006702AB /* ViewController.m */,
+				83A20E501AF30C86007C5FD5 /* Rep Object */,
 				839A5D7E1AF18799006702AB /* Main.storyboard */,
 				839A5D811AF18799006702AB /* Images.xcassets */,
 				839A5D831AF18799006702AB /* LaunchScreen.xib */,
@@ -117,6 +129,15 @@
 				839A5D8F1AF18799006702AB /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		83A20E501AF30C86007C5FD5 /* Rep Object */ = {
+			isa = PBXGroup;
+			children = (
+				83A20E4D1AF305A1007C5FD5 /* Representative.h */,
+				83A20E4E1AF305A1007C5FD5 /* Representative.m */,
+			);
+			name = "Rep Object";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				83A20E4F1AF305A1007C5FD5 /* Representative.m in Sources */,
 				839A5D7D1AF18799006702AB /* ViewController.m in Sources */,
 				839A5D7A1AF18799006702AB /* AppDelegate.m in Sources */,
 				839A5D771AF18799006702AB /* main.m in Sources */,
@@ -412,6 +434,7 @@
 				839A5D961AF18799006702AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		839A5D971AF18799006702AB /* Build configuration list for PBXNativeTarget "RainMyRepresentativesTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +443,7 @@
 				839A5D991AF18799006702AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
