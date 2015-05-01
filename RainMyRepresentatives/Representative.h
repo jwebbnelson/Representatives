@@ -10,4 +10,14 @@
 
 @interface Representative : NSObject
 
+@property (strong, nonatomic) NSString *name;
+@property (strong, nonatomic) NSString *party;
+@property (strong, nonatomic) NSString *state;
+@property (strong, nonatomic) NSString *district;
+@property (strong, nonatomic) NSString *phone;
+@property (strong, nonatomic) NSString *office;
+@property (strong, nonatomic) NSString *link;
+
+-(instancetype)initWithDictionary:(NSDictionary *)dictionary;
+
 @end
