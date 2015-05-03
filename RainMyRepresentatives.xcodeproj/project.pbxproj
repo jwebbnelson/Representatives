@@ -17,6 +17,7 @@
 		83A20E4F1AF305A1007C5FD5 /* Representative.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A20E4E1AF305A1007C5FD5 /* Representative.m */; };
 		83A20E521AF30CEB007C5FD5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A20E511AF30CEB007C5FD5 /* MapKit.framework */; };
 		83A20E541AF30CF2007C5FD5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A20E531AF30CF2007C5FD5 /* CoreLocation.framework */; };
+		83A20E571AF3155A007C5FD5 /* RepresentativeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A20E561AF3155A007C5FD5 /* RepresentativeController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		83A20E4E1AF305A1007C5FD5 /* Representative.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Representative.m; sourceTree = "<group>"; };
 		83A20E511AF30CEB007C5FD5 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		83A20E531AF30CF2007C5FD5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		83A20E551AF3155A007C5FD5 /* RepresentativeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepresentativeController.h; sourceTree = "<group>"; };
+		83A20E561AF3155A007C5FD5 /* RepresentativeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepresentativeController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +99,7 @@
 				839A5D791AF18799006702AB /* AppDelegate.m */,
 				839A5D7B1AF18799006702AB /* ViewController.h */,
 				839A5D7C1AF18799006702AB /* ViewController.m */,
+				83A20E581AF31562007C5FD5 /* Controller */,
 				83A20E501AF30C86007C5FD5 /* Rep Object */,
 				839A5D7E1AF18799006702AB /* Main.storyboard */,
 				839A5D811AF18799006702AB /* Images.xcassets */,
@@ -138,6 +142,15 @@
 				83A20E4E1AF305A1007C5FD5 /* Representative.m */,
 			);
 			name = "Rep Object";
+			sourceTree = "<group>";
+		};
+		83A20E581AF31562007C5FD5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				83A20E551AF3155A007C5FD5 /* RepresentativeController.h */,
+				83A20E561AF3155A007C5FD5 /* RepresentativeController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,6 +256,7 @@
 				83A20E4F1AF305A1007C5FD5 /* Representative.m in Sources */,
 				839A5D7D1AF18799006702AB /* ViewController.m in Sources */,
 				839A5D7A1AF18799006702AB /* AppDelegate.m in Sources */,
+				83A20E571AF3155A007C5FD5 /* RepresentativeController.m in Sources */,
 				839A5D771AF18799006702AB /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
