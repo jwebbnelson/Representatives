@@ -9,8 +9,10 @@
 #import "HomeScreenViewController.h"
 #import "RepresentativeController.h"
 #import "HomeScreenTableViewCell.h"
+#import "SearchViewController.h"
 
-@interface HomeScreenViewController () 
+@interface HomeScreenViewController () <UITableViewDelegate>
+@property (strong, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -29,12 +31,18 @@
     
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    HomeScreenTableViewCell *cell = sender;
+    SearchViewController *searchViewController = [segue destinationViewController];
+    NSIndexPath *indexPath = [self.tableView indexPathForCell:cell];
+    [searchViewController updateWithSearchType:indexPath.row];
+}
+
+#pragma mark - TableView DataSource Methods
 -(UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *) indexPath {
     
     HomeScreenTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
-    
     [cell updateWithTitle:[self cellTitles][indexPath.row]];
-    
     return cell;
 }
 
@@ -43,14 +51,11 @@
 }
 
 -(NSArray *)cellTitles {
-    return @[@"Name",@"Zipcode",@"State"];
+    return @[@"Name",@"State",@"Zipcode"];
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - TableView Delegate Methods
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
 }
-
-
-
 @end
