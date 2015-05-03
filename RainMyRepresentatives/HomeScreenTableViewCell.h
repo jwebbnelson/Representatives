@@ -10,4 +10,6 @@
 
 @interface HomeScreenTableViewCell : UITableViewCell
 
+-(void)updateWithTitle:(NSString *)title;
+
 @end

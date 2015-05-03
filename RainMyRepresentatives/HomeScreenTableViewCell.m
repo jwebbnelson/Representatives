@@ -8,7 +8,21 @@
 
 #import "HomeScreenTableViewCell.h"
 
+@interface HomeScreenTableViewCell ()
+
+@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
+
+
+@end
+
 @implementation HomeScreenTableViewCell
+
+-(void)updateWithTitle:(NSString *)title {
+    
+    self.titleLabel.text = title;
+}
+
+
 
 - (void)awakeFromNib {
     // Initialization code
