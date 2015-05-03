@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		839A5D771AF18799006702AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 839A5D761AF18799006702AB /* main.m */; };
 		839A5D7A1AF18799006702AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 839A5D791AF18799006702AB /* AppDelegate.m */; };
-		839A5D7D1AF18799006702AB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 839A5D7C1AF18799006702AB /* ViewController.m */; };
 		839A5D801AF18799006702AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839A5D7E1AF18799006702AB /* Main.storyboard */; };
 		839A5D821AF18799006702AB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 839A5D811AF18799006702AB /* Images.xcassets */; };
 		839A5D851AF18799006702AB /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 839A5D831AF18799006702AB /* LaunchScreen.xib */; };
@@ -18,6 +17,8 @@
 		83A20E521AF30CEB007C5FD5 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A20E511AF30CEB007C5FD5 /* MapKit.framework */; };
 		83A20E541AF30CF2007C5FD5 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83A20E531AF30CF2007C5FD5 /* CoreLocation.framework */; };
 		83A20E571AF3155A007C5FD5 /* RepresentativeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A20E561AF3155A007C5FD5 /* RepresentativeController.m */; };
+		83EF29491AF680BA009F1795 /* HomeScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EF29481AF680BA009F1795 /* HomeScreenViewController.m */; };
+		83EF294D1AF6C774009F1795 /* HomeScreenTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EF294C1AF6C774009F1795 /* HomeScreenTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,8 +37,6 @@
 		839A5D761AF18799006702AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		839A5D781AF18799006702AB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		839A5D791AF18799006702AB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		839A5D7B1AF18799006702AB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		839A5D7C1AF18799006702AB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		839A5D7F1AF18799006702AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		839A5D811AF18799006702AB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		839A5D841AF18799006702AB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -50,6 +49,10 @@
 		83A20E531AF30CF2007C5FD5 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
 		83A20E551AF3155A007C5FD5 /* RepresentativeController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepresentativeController.h; sourceTree = "<group>"; };
 		83A20E561AF3155A007C5FD5 /* RepresentativeController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepresentativeController.m; sourceTree = "<group>"; };
+		83EF29471AF680BA009F1795 /* HomeScreenViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeScreenViewController.h; sourceTree = "<group>"; };
+		83EF29481AF680BA009F1795 /* HomeScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeScreenViewController.m; sourceTree = "<group>"; };
+		83EF294B1AF6C774009F1795 /* HomeScreenTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeScreenTableViewCell.h; sourceTree = "<group>"; };
+		83EF294C1AF6C774009F1795 /* HomeScreenTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeScreenTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,8 +100,7 @@
 			children = (
 				839A5D781AF18799006702AB /* AppDelegate.h */,
 				839A5D791AF18799006702AB /* AppDelegate.m */,
-				839A5D7B1AF18799006702AB /* ViewController.h */,
-				839A5D7C1AF18799006702AB /* ViewController.m */,
+				83EF294A1AF680BF009F1795 /* View */,
 				83A20E581AF31562007C5FD5 /* Controller */,
 				83A20E501AF30C86007C5FD5 /* Rep Object */,
 				839A5D7E1AF18799006702AB /* Main.storyboard */,
@@ -151,6 +153,17 @@
 				83A20E561AF3155A007C5FD5 /* RepresentativeController.m */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		83EF294A1AF680BF009F1795 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				83EF29471AF680BA009F1795 /* HomeScreenViewController.h */,
+				83EF29481AF680BA009F1795 /* HomeScreenViewController.m */,
+				83EF294B1AF6C774009F1795 /* HomeScreenTableViewCell.h */,
+				83EF294C1AF6C774009F1795 /* HomeScreenTableViewCell.m */,
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -254,7 +267,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				83A20E4F1AF305A1007C5FD5 /* Representative.m in Sources */,
-				839A5D7D1AF18799006702AB /* ViewController.m in Sources */,
+				83EF29491AF680BA009F1795 /* HomeScreenViewController.m in Sources */,
+				83EF294D1AF6C774009F1795 /* HomeScreenTableViewCell.m in Sources */,
 				839A5D7A1AF18799006702AB /* AppDelegate.m in Sources */,
 				83A20E571AF3155A007C5FD5 /* RepresentativeController.m in Sources */,
 				839A5D771AF18799006702AB /* main.m in Sources */,
@@ -382,6 +396,7 @@
 				INFOPLIST_FILE = RainMyRepresentatives/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -392,6 +407,7 @@
 				INFOPLIST_FILE = RainMyRepresentatives/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

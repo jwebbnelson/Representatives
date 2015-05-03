@@ -18,6 +18,6 @@
 @property (strong, nonatomic) NSString *office;
 @property (strong, nonatomic) NSString *link;
 
--(instancetype)initWithDictionary:(NSDictionary *)dictionary;
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary;
 
 @end

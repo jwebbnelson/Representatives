@@ -11,7 +11,7 @@
 
 @implementation Representative
 
--(instancetype)initWithDictionary:(NSDictionary *)dictionary {
+- (instancetype)initWithDictionary:(NSDictionary *)dictionary {
     self = [super init];
     // Update Rep properties with dictionary parameter
     if (self) {
