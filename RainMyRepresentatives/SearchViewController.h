@@ -8,6 +8,16 @@
 
 #import <UIKit/UIKit.h>
 
-@interface SearchViewController : UIViewController
+typedef NS_ENUM (NSInteger, SearchType) {
+    Name,
+    State,
+    Zipcode,
+};
+
+@interface SearchViewController : UIViewController <UITableViewDataSource>
+
+@property (nonatomic, assign) SearchType searchType;
+
+-(void)updateWithSearchType:(SearchType)searchType;
 
 @end
