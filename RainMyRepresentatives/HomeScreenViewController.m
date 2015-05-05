@@ -20,15 +20,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-    
-    [[RepresentativeController sharedInstance] searchForRepresentativesWithCompletion:^(BOOL success) {
-        if (success) {
-            
-            NSLog(@"Success");
-        }
-    }];
-    
+    // Do any additional setup after loading the view
 }
 
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
