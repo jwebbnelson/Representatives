@@ -7,9 +7,11 @@
 //
 
 #import "RepDetailViewController.h"
+#import "WebViewController.h"
+#import <MessageUI/MessageUI.h>
+#import "LocationViewController.h"
 
-
-@interface RepDetailViewController ()
+@interface RepDetailViewController () <MFMessageComposeViewControllerDelegate, MFMailComposeViewControllerDelegate>
 
 @property (nonatomic, strong) Representative *currentRep;
 @property (strong, nonatomic) IBOutlet UILabel *nameLabel;
@@ -48,14 +50,66 @@
         self.websiteButton.tintColor = [UIColor redColor];
         self.backButton.tintColor = [UIColor redColor];
         self.partyLabel.text = @"Republican";
+    } else  if ([self.currentRep.party isEqualToString:@"I"]) {
+            self.textButton.tintColor = [UIColor purpleColor];
+            self.callButton.tintColor = [UIColor purpleColor];
+            self.locateOffice.tintColor = [UIColor purpleColor];
+            self.websiteButton.tintColor = [UIColor purpleColor];
+            self.backButton.tintColor = [UIColor purpleColor];
+            self.partyLabel.text = @"Republican";
     } else if ([self.currentRep.party isEqualToString:@"D"]){
         self.partyLabel.text = @"Democrat";
     }
-        
-    
 }
+
 - (IBAction)backButton:(id)sender {
     [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+#pragma mark - Text Compose Methods
+- (IBAction)textButtonAction:(id)sender {
+    
+    if(![MFMessageComposeViewController canSendText]) {
+        UIAlertView *warningAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Your device doesn't support SMS!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [warningAlert show];
+        return;
+    }
+    NSArray *recipents = [NSArray arrayWithObject:self.currentRep.phone];
+    NSString *message = @"Hello, I obtained your contact info via RainMyRepresentatives.";
+    
+    MFMessageComposeViewController *messageController = [[MFMessageComposeViewController alloc] init];
+    messageController.messageComposeDelegate = self;
+    [messageController setRecipients:recipents];
+    [messageController setBody:message];
+    
+    // Present message view controller on screen
+    [self presentViewController:messageController animated:YES completion:nil];
+}
+
+- (void)messageComposeViewController:(MFMessageComposeViewController *)controller didFinishWithResult:(MessageComposeResult) result
+{
+    switch (result) {
+        case MessageComposeResultCancelled:
+            break;
+        case MessageComposeResultFailed:
+        {
+            UIAlertView *warningAlert = [[UIAlertView alloc] initWithTitle:@"Error" message:@"Failed to send SMS!" delegate:nil cancelButtonTitle:@"OK" otherButtonTitles:nil];
+            [warningAlert show];
+            break;
+        }
+        case MessageComposeResultSent:
+            break;
+        default:
+            break;
+    }
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+
+// Call Representative
+- (IBAction)callButtonAction:(id)sender {
+    NSString *phoneNumber = [@"telprompt://" stringByAppendingString:self.currentRep.phone];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:phoneNumber]];
 }
 
 // Updates from SearchVC prep for segue prior to view loading
@@ -68,14 +122,19 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
+#pragma mark - Navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+    
+    if ([segue.identifier isEqualToString:@"showLocationSegue"]) {
+        LocationViewController *viewController = [segue destinationViewController];
+        [viewController updateWithRepresentative:self.currentRep];
+    }
+    if ([segue.identifier isEqualToString:@"webViewSegue"]) {
+        WebViewController *viewController = [segue destinationViewController];
+        [viewController updateWithRepresentative:self.currentRep];
+    }
 }
-*/
+
 
 @end
