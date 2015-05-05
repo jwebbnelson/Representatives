@@ -7,31 +7,61 @@
 //
 
 #import "LocationViewController.h"
+#import "OfficeAnnotation.h"
 
 @interface LocationViewController ()
 
+@property (weak, nonatomic) IBOutlet MKMapView *mapView;
+@property (nonatomic, strong) Representative *representative;
+@property (nonatomic, assign) CLLocationCoordinate2D location;
 @end
 
 @implementation LocationViewController
 
-- (void)viewDidLoad {
+-(void)updateWithRepresentative:(Representative *)rep {
+    self.representative = rep;
+    [self geocodeWithAddress:self.representative.office];
+    
+}
+-(void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    self.title = self.representative.name;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)geocodeWithAddress:(NSString*)address {
+    CLGeocoder *geocoder = [CLGeocoder new];
+    [geocoder geocodeAddressString:address completionHandler:^(NSArray *placemarks, NSError *error) {
+        if (!error) {
+            CLPlacemark *placeMark = [placemarks firstObject];
+            self.location = placeMark.location.coordinate;
+            [self setupMapView];
+        }
+        else {
+            [self presentFailureAlert];
+            return;
+        }
+    }];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(void)setupMapView {
+    MKCoordinateRegion region;
+    region.center = self.location;
+    region.span = MKCoordinateSpanMake(0.008, 0.008);
+    [self.mapView setRegion:region animated:YES];
+    
+    OfficeAnnotation *annotation = [OfficeAnnotation new];
+    annotation.title = self.representative.name;
+    annotation.coordinate = self.location;
+    annotation.subtitle = self.representative.office;
+    [self.mapView showAnnotations:[NSArray arrayWithObject:annotation] animated:YES];
 }
-*/
 
+-(void)presentFailureAlert {
+    UIAlertController *failAlert = [UIAlertController alertControllerWithTitle:@"Address Not Found" message:@"Check your connection and try again" preferredStyle:UIAlertControllerStyleAlert];
+    
+    [failAlert addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+        [self dismissViewControllerAnimated:YES completion:nil];
+    }]];
+    [self presentViewController:failAlert animated:YES completion:nil];
+}
 @end

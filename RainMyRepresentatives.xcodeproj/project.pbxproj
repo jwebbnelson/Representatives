@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		832FAAD61AF8667000BAC2F4 /* OfficeAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 832FAAD51AF8667000BAC2F4 /* OfficeAnnotation.m */; };
 		839A5D771AF18799006702AB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 839A5D761AF18799006702AB /* main.m */; };
 		839A5D7A1AF18799006702AB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 839A5D791AF18799006702AB /* AppDelegate.m */; };
 		839A5D801AF18799006702AB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 839A5D7E1AF18799006702AB /* Main.storyboard */; };
@@ -19,6 +20,11 @@
 		83A20E571AF3155A007C5FD5 /* RepresentativeController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83A20E561AF3155A007C5FD5 /* RepresentativeController.m */; };
 		83EF29491AF680BA009F1795 /* HomeScreenViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EF29481AF680BA009F1795 /* HomeScreenViewController.m */; };
 		83EF294D1AF6C774009F1795 /* HomeScreenTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EF294C1AF6C774009F1795 /* HomeScreenTableViewCell.m */; };
+		83EF29511AF6D18B009F1795 /* SearchViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EF29501AF6D18B009F1795 /* SearchViewController.m */; };
+		83EF29551AF6DCF1009F1795 /* SearchResultsTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EF29541AF6DCF1009F1795 /* SearchResultsTableViewCell.m */; };
+		83EF29581AF74D84009F1795 /* RepDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EF29571AF74D84009F1795 /* RepDetailViewController.m */; };
+		83EF295C1AF80636009F1795 /* WebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EF295B1AF80636009F1795 /* WebViewController.m */; };
+		83EF29601AF849B3009F1795 /* LocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 83EF295F1AF849B3009F1795 /* LocationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +38,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		832FAAD41AF8667000BAC2F4 /* OfficeAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OfficeAnnotation.h; sourceTree = "<group>"; };
+		832FAAD51AF8667000BAC2F4 /* OfficeAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OfficeAnnotation.m; sourceTree = "<group>"; };
 		839A5D711AF18799006702AB /* RainMyRepresentatives.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RainMyRepresentatives.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		839A5D751AF18799006702AB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		839A5D761AF18799006702AB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -53,6 +61,16 @@
 		83EF29481AF680BA009F1795 /* HomeScreenViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeScreenViewController.m; sourceTree = "<group>"; };
 		83EF294B1AF6C774009F1795 /* HomeScreenTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeScreenTableViewCell.h; sourceTree = "<group>"; };
 		83EF294C1AF6C774009F1795 /* HomeScreenTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeScreenTableViewCell.m; sourceTree = "<group>"; };
+		83EF294F1AF6D18B009F1795 /* SearchViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchViewController.h; sourceTree = "<group>"; };
+		83EF29501AF6D18B009F1795 /* SearchViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchViewController.m; sourceTree = "<group>"; };
+		83EF29531AF6DCF1009F1795 /* SearchResultsTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SearchResultsTableViewCell.h; sourceTree = "<group>"; };
+		83EF29541AF6DCF1009F1795 /* SearchResultsTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SearchResultsTableViewCell.m; sourceTree = "<group>"; };
+		83EF29561AF74D84009F1795 /* RepDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RepDetailViewController.h; sourceTree = "<group>"; };
+		83EF29571AF74D84009F1795 /* RepDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RepDetailViewController.m; sourceTree = "<group>"; };
+		83EF295A1AF80636009F1795 /* WebViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebViewController.h; sourceTree = "<group>"; };
+		83EF295B1AF80636009F1795 /* WebViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebViewController.m; sourceTree = "<group>"; };
+		83EF295E1AF849B3009F1795 /* LocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LocationViewController.h; sourceTree = "<group>"; };
+		83EF295F1AF849B3009F1795 /* LocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,10 +118,10 @@
 			children = (
 				839A5D781AF18799006702AB /* AppDelegate.h */,
 				839A5D791AF18799006702AB /* AppDelegate.m */,
+				839A5D7E1AF18799006702AB /* Main.storyboard */,
 				83EF294A1AF680BF009F1795 /* View */,
 				83A20E581AF31562007C5FD5 /* Controller */,
 				83A20E501AF30C86007C5FD5 /* Rep Object */,
-				839A5D7E1AF18799006702AB /* Main.storyboard */,
 				839A5D811AF18799006702AB /* Images.xcassets */,
 				839A5D831AF18799006702AB /* LaunchScreen.xib */,
 				839A5D741AF18799006702AB /* Supporting Files */,
@@ -158,12 +176,64 @@
 		83EF294A1AF680BF009F1795 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				83EF294E1AF6D173009F1795 /* Home */,
+				83EF29521AF6D193009F1795 /* Search */,
+				83EF29591AF74D89009F1795 /* RepDetails */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		83EF294E1AF6D173009F1795 /* Home */ = {
+			isa = PBXGroup;
+			children = (
 				83EF29471AF680BA009F1795 /* HomeScreenViewController.h */,
 				83EF29481AF680BA009F1795 /* HomeScreenViewController.m */,
 				83EF294B1AF6C774009F1795 /* HomeScreenTableViewCell.h */,
 				83EF294C1AF6C774009F1795 /* HomeScreenTableViewCell.m */,
 			);
-			name = View;
+			name = Home;
+			sourceTree = "<group>";
+		};
+		83EF29521AF6D193009F1795 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				83EF294F1AF6D18B009F1795 /* SearchViewController.h */,
+				83EF29501AF6D18B009F1795 /* SearchViewController.m */,
+				83EF29531AF6DCF1009F1795 /* SearchResultsTableViewCell.h */,
+				83EF29541AF6DCF1009F1795 /* SearchResultsTableViewCell.m */,
+			);
+			name = Search;
+			sourceTree = "<group>";
+		};
+		83EF29591AF74D89009F1795 /* RepDetails */ = {
+			isa = PBXGroup;
+			children = (
+				83EF29561AF74D84009F1795 /* RepDetailViewController.h */,
+				83EF29571AF74D84009F1795 /* RepDetailViewController.m */,
+				83EF29611AF849B8009F1795 /* Location */,
+				83EF295D1AF8063A009F1795 /* Website */,
+			);
+			name = RepDetails;
+			sourceTree = "<group>";
+		};
+		83EF295D1AF8063A009F1795 /* Website */ = {
+			isa = PBXGroup;
+			children = (
+				83EF295A1AF80636009F1795 /* WebViewController.h */,
+				83EF295B1AF80636009F1795 /* WebViewController.m */,
+			);
+			name = Website;
+			sourceTree = "<group>";
+		};
+		83EF29611AF849B8009F1795 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				83EF295E1AF849B3009F1795 /* LocationViewController.h */,
+				83EF295F1AF849B3009F1795 /* LocationViewController.m */,
+				832FAAD41AF8667000BAC2F4 /* OfficeAnnotation.h */,
+				832FAAD51AF8667000BAC2F4 /* OfficeAnnotation.m */,
+			);
+			name = Location;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -267,11 +337,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				83A20E4F1AF305A1007C5FD5 /* Representative.m in Sources */,
+				83EF295C1AF80636009F1795 /* WebViewController.m in Sources */,
 				83EF29491AF680BA009F1795 /* HomeScreenViewController.m in Sources */,
+				83EF29601AF849B3009F1795 /* LocationViewController.m in Sources */,
+				832FAAD61AF8667000BAC2F4 /* OfficeAnnotation.m in Sources */,
+				83EF29581AF74D84009F1795 /* RepDetailViewController.m in Sources */,
+				83EF29551AF6DCF1009F1795 /* SearchResultsTableViewCell.m in Sources */,
 				83EF294D1AF6C774009F1795 /* HomeScreenTableViewCell.m in Sources */,
 				839A5D7A1AF18799006702AB /* AppDelegate.m in Sources */,
 				83A20E571AF3155A007C5FD5 /* RepresentativeController.m in Sources */,
 				839A5D771AF18799006702AB /* main.m in Sources */,
+				83EF29511AF6D18B009F1795 /* SearchViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

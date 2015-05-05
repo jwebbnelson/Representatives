@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Representative.h"
+#import <MapKit/MapKit.h> 
 
 @interface LocationViewController : UIViewController
+
+-(void)updateWithRepresentative:(Representative *)rep;
 
 @end
