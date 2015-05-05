@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Representative.h"
 
 @interface SearchResultsTableViewCell : UITableViewCell
 
+-(void)updateWithRepresentative:(Representative *)representative;
 @end
