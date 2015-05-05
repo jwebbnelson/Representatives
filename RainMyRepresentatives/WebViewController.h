@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Representative.h";
 
 @interface WebViewController : UIViewController
+
+-(void)updateWithRepresentative:(Representative *)representative;
 
 @end
