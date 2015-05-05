@@ -7,9 +7,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SearchViewController.h"
 
 @interface RepresentativeController : NSObject
 
-+(RepresentativeController *)sharedInstance;
++ (RepresentativeController *)sharedInstance;
+- (void)searchForRepresentativesWithSearchString:(NSString *)searchString SearchType:(SearchType)searchType andCompletion:(void (^)(BOOL success))completion;
+
+@property (nonatomic, strong) NSArray *representatives;
+@property (nonatomic, strong) NSArray *senators;
 
 @end
